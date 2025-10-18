@@ -1,0 +1,22 @@
+services
+    -type: web
+    name: vasudev-bot
+    plan: free
+    env: docker
+    dockerfilpath: dockerfile
+    repo: https://github.com/VASUDEV-BOT/VASUDEV3
+    branch: main
+    autodeploy: yes
+    envVars:
+      -key: BOT_TOKEN
+       sync: yes
+       -key: API_ID
+       sync: yes
+       -key: OWNER
+       sync: yes
+       -key: CREDIT
+       sync: yes
+      #-key: webhook
+       #sync: yes
+       -key: PORT 
+        value: 8000
